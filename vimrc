@@ -38,3 +38,6 @@ set antialias
 if has("gui_running")
     set guioptions=-t
 endif
+
+"Single character insert
+nmap <Space> i_<Esc>r
