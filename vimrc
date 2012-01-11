@@ -17,6 +17,8 @@ set tabstop=4 shiftwidth=4
 set expandtab                       "tabs to spaces
 set backspace=indent,eol,start      "backspace through everything in insert mode
 set noerrorbells                    "No error bells
+set visualbell t_vb=                "No visual bell
+set scrolloff=5                     "Make sure you always get 5 lines visually around the cursor when scrolling
 
 set hlsearch
 set incsearch
@@ -36,8 +38,14 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 ""GUI Only
 set antialias
 if has("gui_running")
-    set guioptions=-t
+   set guioptions-=T
 endif
 
 "Single character insert
 nmap <Space> i_<Esc>r
+
+" \ is the leader character
+let mapleader = ","
+
+" Hide search highlighting
+map <Leader>h :set invhls <CR>
