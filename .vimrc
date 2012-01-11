@@ -1,5 +1,6 @@
 call pathogen#infect()
 
+set background=dark
 color desert
 syntax on
 filetype plugin indent on
