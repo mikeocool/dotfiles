@@ -16,7 +16,6 @@ set tabstop=4 shiftwidth=4
 set expandtab                       "tabs to spaces
 set backspace=indent,eol,start      "backspace through everything in insert mode
 set noerrorbells                    "No error bells
-set cursorline                      "Highlight cursor line
 
 set hlsearch
 set incsearch
@@ -34,7 +33,6 @@ set wildmenu "enables tab completion
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 ""GUI Only
-set guifont=Inconsolata:h12
 set antialias
 if has("gui_running")
     set guioptions=-t
