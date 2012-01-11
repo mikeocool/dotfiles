@@ -1,0 +1,35 @@
+[user]
+	name = Mike O'Toole
+	email = mike.otoole@gmail.com
+
+[color]
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+
+[color "status"]
+        added = cyan 
+        changed = green 
+        untracked = red 
+
+[merge]
+	summary = true
+[diff]
+	renames = true
+[mergetool]
+	keepBackup = true
+[core]
+	quotepath = false
