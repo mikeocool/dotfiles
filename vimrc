@@ -8,6 +8,7 @@ filetype plugin indent on
 set nocompatible
 set encoding=utf-8
 
+set hidden                          "allow hiding buffers with unsaved changes
 set showmode                        "show edit mode at bottom of screen
 set showcmd                         "shows command in bottom right
 set number                          "show line numbers
@@ -49,3 +50,6 @@ let mapleader = ","
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
+
+" prepopulate command line with :e <current file directory>
+map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
