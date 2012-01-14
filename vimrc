@@ -1,11 +1,11 @@
 call pathogen#infect()
 
+set nocompatible
 set background=dark
 color desert
 syntax on
 filetype plugin indent on
 
-set nocompatible
 set encoding=utf-8
 
 set hidden                          "allow hiding buffers with unsaved changes
@@ -14,8 +14,9 @@ set showcmd                         "shows command in bottom right
 set number                          "show line numbers
 set ruler                           "always show cursor position
 set nowrap
-set tabstop=4 shiftwidth=4
+set tabstop=4 shiftwidth=4 softtabstop=4
 set expandtab                       "tabs to spaces
+set smarttab 
 set backspace=indent,eol,start      "backspace through everything in insert mode
 set noerrorbells                    "No error bells
 set visualbell t_vb=                "No visual bell
