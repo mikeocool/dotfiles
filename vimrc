@@ -1,5 +1,3 @@
-call pathogen#infect()
-
 set nocompatible
 set background=dark
 color desert
@@ -11,7 +9,7 @@ set encoding=utf-8
 set hidden                          "allow hiding buffers with unsaved changes
 set showmode                        "show edit mode at bottom of screen
 set showcmd                         "shows command in bottom right
-set number                          "show line numbers
+set rnu                             "show line numbers
 set ruler                           "always show cursor position
 set nowrap
 set tabstop=4 shiftwidth=4 softtabstop=4
@@ -54,3 +52,14 @@ map <Leader>h :set invhls <CR>
 
 " prepopulate command line with :e <current file directory>
 map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
+
+" toggle between relative and actual line numbers
+function! g:ToggleNuMode() 
+    if(&rnu == 1) 
+        set nu 
+    else 
+        set rnu 
+    endif 
+endfunc 
+
+nnoremap <C-L> :call g:ToggleNuMode()<cr> 
