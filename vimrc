@@ -41,8 +41,8 @@ if has("gui_running")
    set guioptions-=T
 endif
 
-"Single character insert
-nmap <Space> i_<Esc>r
+"Make funny character show up red
+highlight NonText ctermfg=DarkRed
 
 " \ is the leader character
 let mapleader = ","
