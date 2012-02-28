@@ -19,6 +19,7 @@ set backspace=indent,eol,start      "backspace through everything in insert mode
 set noerrorbells                    "No error bells
 set visualbell t_vb=                "No visual bell
 set scrolloff=5                     "Make sure you always get 5 lines visually around the cursor when scrolling
+set autoread                        "Automatically realod files when they're changed by an external program
 
 set hlsearch
 set incsearch
@@ -44,6 +45,12 @@ endif
 "Make funny character show up red
 highlight NonText ctermfg=DarkRed
 
+" Turn off arrow keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
 " \ is the leader character
 let mapleader = ","
 
@@ -52,6 +59,9 @@ map <Leader>h :set invhls <CR>
 
 " prepopulate command line with :e <current file directory>
 map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
+
+" toggle autoclose on and off
+map <leader>a :AutoCloseToggle
 
 " toggle between relative and actual line numbers
 function! g:ToggleNuMode() 
