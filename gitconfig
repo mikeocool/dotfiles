@@ -33,3 +33,5 @@
 	keepBackup = true
 [core]
 	quotepath = false
+[push]
+	default = simple
