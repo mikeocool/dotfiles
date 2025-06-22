@@ -1,7 +1,9 @@
 set nocompatible
 set background=dark
 
-syntax on
+if has("syntax")
+    syntax on
+endif
 
 set encoding=utf-8
 
