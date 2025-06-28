@@ -7,10 +7,6 @@ ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 
 # Augment existing .bashrc/.zshrc
-DOTFILES_TO_SOURCE=(
-    "${DOTFILES_DIR}/.aliases"
-    "${DOTFILES_DIR}/.functions"
-)
 MARKER_COMMENT="# Dotfiles additions"
 
 RC_FILES=(
@@ -18,7 +14,12 @@ RC_FILES=(
     "${HOME}/.zshrc"
 )
 
-for rcfile in "${DOTFILES_TO_SOURCE[@]}"; do
+DOTFILES_TO_SOURCE=(
+    "${DOTFILES_DIR}/.aliases"
+    "${DOTFILES_DIR}/.functions"
+)
+
+for rcfile in "${RC_FILES[@]}"; do
     if [ ! -f "$rcfile" ]; then
         touch "$rcfile"
         echo "Created ${rcfile}"
