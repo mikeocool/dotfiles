@@ -6,6 +6,9 @@ ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 
+mkdir -p ${HOME}/.claude
+ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
+
 # Augment existing .bashrc/.zshrc
 MARKER_COMMENT="# Dotfiles additions"
 
