@@ -1,0 +1,3 @@
+fixssh() {
+  eval $(tmux show-env -s |grep '^SSH_')
+}
