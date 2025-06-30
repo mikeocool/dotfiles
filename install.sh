@@ -2,6 +2,24 @@
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+shell_addition() {
+    rcfile=$1
+    add_file=$2
+    marker="# Dotfile addition - ${add_file}"
+
+    if [ ! -f "$rcfile" ]; then
+        touch "$rcfile"
+        echo "Created ${rcfile}"
+    fi
+
+    if ! grep -q "$marker" "$rcfile"; then
+        echo "" >> "$rcfile"
+        echo "$marker" >> "$rcfile"
+        echo "if [ -f \"$add_file\" ]; then source \"$add_file\"; fi" >> "$rcfile"
+    fi
+}
+
+# Basic dotfile links
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
@@ -9,33 +27,6 @@ ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 mkdir -p ${HOME}/.claude
 ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
 
-# Augment existing .bashrc/.zshrc
-MARKER_COMMENT="# Dotfiles additions"
-
-RC_FILES=(
-    "${HOME}/.bashrc"
-    "${HOME}/.zshrc"
-)
-
-DOTFILES_TO_SOURCE=(
-    "${DOTFILES_DIR}/.aliases"
-    "${DOTFILES_DIR}/.functions"
-)
-
-for rcfile in "${RC_FILES[@]}"; do
-    if [ ! -f "$rcfile" ]; then
-        touch "$rcfile"
-        echo "Created ${rcfile}"
-    fi
-
-    if ! grep -q "$MARKER_COMMENT" "$rcfile"; then
-        echo "" >> "$rcfile"
-        echo "$MARKER_COMMENT" >> "$rcfile"
-
-        for file in "${DOTFILES_TO_SOURCE[@]}"; do
-            if [ -f "$file" ]; then
-                echo "if [ -f \"$file\" ]; then source \"$file\"; fi" >> "$rcfile"
-            fi
-        done
-    fi
-done
+# Add things to shell rc files
+shell_addition "${HOME}/.bashrc" "${DOTFILES_DIR}/.bashrc_additions"
+shell_addition "${HOME}/.zshrc" "${DOTFILES_DIR}/.zshrc_additions"
