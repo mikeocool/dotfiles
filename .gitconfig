@@ -1,7 +1,5 @@
 [core]
         editor = vi
-[column]
-        ui = auto
 [branch]
         sort = -committerdate
 [tag]

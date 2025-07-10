@@ -1,0 +1,7 @@
+way[highway="track"] {
+    color: #eb8c34
+}
+
+way[highway="residential"] {
+    color: #34eb77;
+}
