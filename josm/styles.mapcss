@@ -1,7 +1,58 @@
+node|z14-[tourism=camp_site] {
+    icon-image: "presets/accommodation/camping.svg";
+    icon-width: 10;
+}
+
+way[highway="residential"] {
+    color: #2C5F34;
+}
+
+node|z14-[tourism=camp_site] {
+    icon-image: "presets/accommodation/camping.svg";
+    icon-width: 10;
+}
+
 way[highway="track"] {
     color: #eb8c34
 }
 
-way[highway="residential"] {
-    color: #34eb77;
+way[highway=track][ref^="FR"] {
+    color: #f5ad42;
 }
+
+way[highway=track][ref^="FR"][motor_vehicle=no] {
+    color: #a37502;
+}
+
+way[highway][snowmobile] {
+    casing-width: 1;
+    casing-color: #3cdfff;
+    casing-opacity: 75%;
+}
+
+way[highway][piste:type] {
+    casing-width: 2;
+    casing-color: #000080;
+    casing-opacity: 65%;
+}
+
+/*
+specify track type/smoothness with dashes along the line
+
+highway legal vehicles - mostly solid?
+highway vehicles - [highway=track][motor_vehicle!=no] - solid line
+all vehicles - [highway=track][motor_vehicle!=no][ohv=designated]
+vehicles < 50in - [highway=track][motor_vehicle=no][ohv!=yes|designated][atv=yes|designated]
+trail - [highway=track][motor_vehicle=no][ohv!=yes|designated][atv!=yes|designated]
+
+snowmobile?? - blue dashes
+seasonsal/special restrictions highlight???
+
+rule for FS road without surface
+
+*/
+
+
+/* highlight buildings without address */
+area[building][!addr:street] {fill-color: #FC4C4E; color: #FC4C4E; fill-opacity:0.5}
+area[building][!addr:housenumber] {fill-color: #FC4C4E; color: #FC4C4E; fill-opacity:0.5}
