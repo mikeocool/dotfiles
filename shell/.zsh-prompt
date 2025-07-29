@@ -10,6 +10,9 @@ function git_branch_name()
   fi
 }
 
+# Enable substitution in the prompt.
+setopt prompt_subst
+
 autoload -U colors && colors
 
 prompt='%{$fg[cyan]%}%2/%F{242} $(git_branch_name)> %f'
