@@ -16,3 +16,4 @@ setopt prompt_subst
 autoload -U colors && colors
 
 prompt='%{$fg[cyan]%}%m:%2/%F{242} $(git_branch_name)> %f'
+RPROMPT='%F{8}⏱ %*%f'
