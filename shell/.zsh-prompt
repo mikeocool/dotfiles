@@ -1,0 +1,1 @@
+prompt='%{$fg[cyan]%}%2/%F{242} $(git_branch_name)> %f'
