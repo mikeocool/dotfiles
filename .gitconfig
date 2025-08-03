@@ -19,3 +19,6 @@
         prune = true
         pruneTags = true
         all = true
+[user]
+	email = mike-git-noreply@keenandbright.dev
+	name = Mike O'Toole
