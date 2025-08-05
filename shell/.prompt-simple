@@ -1,6 +1,6 @@
 if [[ -n "$ZSH_VERSION" ]]; then
-    export PS1='%F{green}%B➔%b%f '
+    export PS1='%F{green}%B>%b%f '
     export RPROMPT=''
 elif [[ -n "$BASH_VERSION" ]]; then
-    export PS1='\[\033[1;32m\]➔\[\033[0m\] '
+    export PS1='\[\033[1;32m\]>\[\033[0m\] '
 fi
