@@ -1,1 +1,2 @@
 alias dcr="docker compose run --rm -it"
+alias zj="zellij"
