@@ -23,7 +23,8 @@ shell_addition() {
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
-ln -sf "${DOTFILES_DIR}/.config/zellij/config.kdl" "${HOME}/.config/zellij/config.kdl"
+mkdir -p ${HOME}/.config/zellij && ln -sf "${DOTFILES_DIR}/.config/zellij/config.kdl" "${HOME}/.config/zellij/config.kdl"
+mkdir -p ${HOME}/.config/ghostty && ln -sf "${DOTFILES_DIR}/.config/ghostty/config" "${HOME}/.config/ghostty/config"
 
 mkdir -p ${HOME}/.claude
 ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
