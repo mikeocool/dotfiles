@@ -9,7 +9,7 @@ theme = OneHalfDark
 font-family = Iosevka
 font-size = 11
 
-background-opacity = 0.8
+background-opacity = 0.9
 
 cursor-style = bar
 cursor-style-blink = false
