@@ -13,3 +13,4 @@ background-opacity = 0.9
 
 cursor-style = bar
 cursor-style-blink = false
+keybind = shift+enter=text:\n
