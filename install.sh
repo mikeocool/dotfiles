@@ -29,6 +29,9 @@ mkdir -p ${HOME}/.config/ghostty && ln -sf "${DOTFILES_DIR}/.config/ghostty/conf
 mkdir -p ${HOME}/.claude
 ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
 
+mkdir -p ${HOME}/.pi/agent
+ln -sf "${DOTFILES_DIR}/.pi/agent/APPEND_SYSTEM.md"
+
 # Add things to shell rc files
 shell_addition "${HOME}/.bashrc" "${DOTFILES_DIR}/.bashrc_additions"
 shell_addition "${HOME}/.zshrc" "${DOTFILES_DIR}/.zshrc_additions"
