@@ -12,8 +12,8 @@ node|z14-[tourism=camp_site] {
     icon-width: 10;
 }
 
-way[highway="track"] {
-    color: #eb8c34
+way[highway=track] {
+    color: #eb8c34;
 }
 
 way[highway=track][ref^="FR"] {
