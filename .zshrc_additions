@@ -2,3 +2,8 @@ export DOTFILES_DIR="$(cd "$(dirname "${(%):-%x}")" && pwd)"
 
 source "${DOTFILES_DIR}/shell/.aliases"
 source "${DOTFILES_DIR}/shell/.functions"
+
+function set-prompt() {
+  echo 'source "${DOTFILES_DIR}/shell/.zsh-prompt"' >> ~/.zshrc
+  echo "Run source ~/.zshrc to activate"
+}
