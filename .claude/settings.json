@@ -2,6 +2,7 @@
   "includeCoAuthoredBy": false,
   "enableAllProjectMcpServers": true,
   "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true
   }
 }
