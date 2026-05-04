@@ -2,7 +2,13 @@
   "includeCoAuthoredBy": false,
   "enableAllProjectMcpServers": true,
   "enabledPlugins": {
+<<<<<<< HEAD
     "swift-lsp@claude-plugins-official": true
   },
   "model": "opus"
+=======
+    "swift-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true
+  }
+>>>>>>> ef9cb4a6582f65ce58f47b805dba188dd172db4f
 }
