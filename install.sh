@@ -31,8 +31,7 @@ ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
 
 mkdir -p ${HOME}/.pi/agent/extensions
 ln -sf "${DOTFILES_DIR}/.pi/agent/APPEND_SYSTEM.md" "${HOME}/.pi/agent/APPEND_SYSTEM.md"
-# TODO only do this on tailscale system?`
-ln -sf "${DOTFILES_DIR}/.pi/agent/extensions/ts-aperature.ts" "${HOME}/.pi/agent/extensions/ts-aperature.ts"
+
 
 # Add things to shell rc files
 shell_addition "${HOME}/.bashrc" "${DOTFILES_DIR}/.bashrc_additions"
