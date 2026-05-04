@@ -11,5 +11,13 @@ export default function (pi: ExtensionAPI) {
         baseUrl: `${GATEWAY}/v1`,
         apiKey: "-",
     });
+    pi.registerProvider("google", {
+        baseUrl: `${GATEWAY}/v1`,
+        apiKey: "-",
+    });
+    pi.registerProvider("openrouter", {
+        baseUrl: `${GATEWAY}/v1`,
+        apiKey: "-",
+    });
     // TODO openrouter
 }
