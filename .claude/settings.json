@@ -1,10 +1,11 @@
 {
   "includeCoAuthoredBy": false,
-  "model": "opus",
   "enableAllProjectMcpServers": true,
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true
   },
-  "effortLevel": "medium"
+  "effortLevel": "medium",
+  "theme": "dark",
+  "awaySummaryEnabled": false
 }
