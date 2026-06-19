@@ -27,7 +27,7 @@ mkdir -p ${HOME}/.config/ghostty && ln -sf "${DOTFILES_DIR}/.config/ghostty/conf
 
 # Git
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
-mkdir -p ${HOME}/.config/git && ln -sf "${DOTFILES_DIR}/.config/git/exclude" "${HOME}/.config/git/exclude"
+mkdir -p ${HOME}/.config/git && ln -sf "${DOTFILES_DIR}/.config/git/ignore" "${HOME}/.config/git/ignore"
 
 # Claude
 mkdir -p ${HOME}/.claude
