@@ -20,15 +20,20 @@ shell_addition() {
 }
 
 # Basic dotfile links
-ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 mkdir -p ${HOME}/.config/zellij && ln -sf "${DOTFILES_DIR}/.config/zellij/config.kdl" "${HOME}/.config/zellij/config.kdl"
 mkdir -p ${HOME}/.config/ghostty && ln -sf "${DOTFILES_DIR}/.config/ghostty/config" "${HOME}/.config/ghostty/config"
 
+# Git
+ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
+mkdir -p ${HOME}/.config/git && ln -sf "${DOTFILES_DIR}/.config/git/exclude" "${HOME}/.config/git/exclude"
+
+# Claude
 mkdir -p ${HOME}/.claude
 ln -sf "${DOTFILES_DIR}/.claude/settings.json" "${HOME}/.claude/settings.json"
 
+# Pi
 mkdir -p ${HOME}/.pi/agent/extensions
 ln -sf "${DOTFILES_DIR}/.pi/agent/APPEND_SYSTEM.md" "${HOME}/.pi/agent/APPEND_SYSTEM.md"
 # TODO only do this on tailscale system?`
