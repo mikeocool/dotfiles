@@ -22,3 +22,9 @@
 [user]
 	email = mike-git-noreply@keenandbright.dev
 	name = Mike O'Toole
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/k/.local/share/mise/installs/github-cli/2.92.0/gh_2.92.0_linux_amd64/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/k/.local/share/mise/installs/github-cli/2.92.0/gh_2.92.0_linux_amd64/bin/gh auth git-credential
